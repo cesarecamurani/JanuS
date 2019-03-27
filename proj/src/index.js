@@ -1,21 +1,34 @@
 const colors = require('colors');
 
+const repeat = (str, n) => Array(n).join(str);
+const indent = n => repeat('    ', n);
+const indentLines = (str, n) => indent(n) + str.replace(/\n/g, `\n${indent(n)}`);
+
 const summary = { success: 0, fail: 0, disabled: 0 };
+
+let indentLevel = 0;
+
+const group = (title, cb) => {
+  indentLevel++;
+  console.log(`\n${indent(indentLevel)}⇨ ${title}`.blue);
+  cb();
+  indentLevel--;
+};
 
 const judge = (title, cb) => {
   try{
     cb();
-    console.log(`${' Passed '.bgGreen.black} ${title.green}`);
+    console.log(`${indent(indentLevel + 1)}${' Passed '.bgGreen.black} ${title.green}`);
     summary.success++;
   } catch(e) {
-    console.log(`${' Failed '.bgRed.black} ${title.red}`);
-    console.log(e.stack.red);
+    console.log(`${indent(indentLevel + 1)}${' Failed '.bgRed.black} ${title.red}`);
+    console.log(indentLines(e.stack.red, indentLevel + 1));
     summary.fail++;
   }
 };
 
 const xjudge = (title, cb) => {
-  console.log(`${' Not Judged '.bgWhite.black} ${title.gray}`);
+  console.log(`${indent(indentLevel + 1)}${' Not Judged '.bgWhite.black} ${title.gray}`);
   summary.disabled++;
 };
 
@@ -36,4 +49,4 @@ const judgement = () => {
   process.exit(0);
 };
 
-module.exports = { verify, judge, xjudge, judgement };
+module.exports = { verify, judge, xjudge, judgement, group };

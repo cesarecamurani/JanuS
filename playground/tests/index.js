@@ -1,6 +1,6 @@
-const { judgement } = require('janus');
+const janus = require('janus');
 
 require('./string-utils.test');
 require('./number-utils.test');
 
-judgement();
+janus.judgement();

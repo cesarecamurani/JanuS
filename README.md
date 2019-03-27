@@ -1,2 +1,3 @@
-# JanuS
-Testing framework made in Javascript
+# 🌜 JanuS  🌛
+
+Testing framework made in <b>Javascript</b>

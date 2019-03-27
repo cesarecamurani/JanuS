@@ -1,0 +1,22 @@
+const { verify, judge } = require('janus');
+
+judge('playing with our new matchers', () => {
+  // The original verify function still works
+  verify(123 === 123);
+
+  verify.truthy('abc');
+  verify.falsy(null);
+
+  const a = { whatever: 777 };
+  const b = a;
+  verify.same(a, b);
+  verify.identical(undefined, null);
+
+  const c = { whatever: { foo: { bar: 'baz' } } };
+  const d = Object.assign({}, c);
+  verify.deeplyIdentical(c, d);
+
+  function boom() { throw new Error('Some error...'); }
+  verify.throws(boom);
+  verify.throws(boom, 'Some error...');
+});

@@ -1,10 +1,12 @@
-const check = (title, cb) => {
+const colors = require('colors');
+
+const judge = (title, cb) => {
   try{
     cb();
-    console.log(`Passed ${title}`);
+    console.log(`${' Passed '.bgGreen.black} ${title.green}`);
   } catch(e) {
-    console.log(`Failed ${title}`);
-    console.log(e.stack);
+    console.log(`${' Failed '.bgRed.black} ${title.red}`);
+    console.log(e.stack.red);
   }
 };
 
@@ -14,4 +16,8 @@ const verify = (val) => {
   throw new Error('Assertion failed.');
 };
 
-module.exports = { verify, check };
+const xjudge = (title, cb) => {
+  console.log(`${' Not Judged '.bgWhite.black} ${title.gray}`);
+};
+
+module.exports = { verify, judge, xjudge };

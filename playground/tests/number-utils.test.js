@@ -1,6 +1,6 @@
 // tyrion/playground/tests/number-utils.test.js
 
-const { verify } = require('tyrion');
+const { verify } = require('janus');
 const numberUtils = require('../src/number-utils');
 
 // Group: isPrime method

@@ -1,6 +1,6 @@
 // tyrion/playground/tests/string-utils.test.js
 
-const { verify } = require('tyrion');
+const { verify } = require('janus');
 const stringUtils = require('../src/string-utils');
 
 // Group: capitalizeFirstLetter method

@@ -12,6 +12,10 @@ group('numberUtils', () => {
       verify(numberUtils.isPrime(23));
     });
 
+    judge('this test should fail =)', () => {
+     verify(123 === 321);
+   });
+
     judge('returns false for non-prime numbers', () => {
       verify(!numberUtils.isPrime(4));
       verify(!numberUtils.isPrime(8));

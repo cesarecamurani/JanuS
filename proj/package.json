@@ -12,5 +12,8 @@
     "js"
   ],
   "author": "cesarecamurani",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "deep-equal": "^1.0.1"
+  }
 }

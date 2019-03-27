@@ -1,0 +1,20 @@
+const { verify, judge, group, beforeAll } = require('janus');
+
+let a;
+
+beforeAll(() => {
+  a = { something: 'example' };
+});
+
+group('playing with the beforeAll function', () => {
+  let b;
+  beforeAll(() => {
+    b = { something: 'example' };
+  });
+  judge('some test', () => {
+    verify.deeplyIdentical(a, b);
+  });
+  judge('another test', () => {
+    verify.identical(11, 11);
+  });
+});

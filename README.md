@@ -28,4 +28,4 @@ npm link
 
 Now you can go in <b>playground/src</b> and add the code to be tested and in <b>playground/tests</b> to write your tests.
  
-Please note that you may need to repeat steps <b>3</b> and <b>4</b> in case you install other dependencies.
+Please note that you may need to repeat steps <b>3</b> and <b>4</b> in case you install other dependencies after them.

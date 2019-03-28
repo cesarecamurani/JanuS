@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node tests"
+    "test": "node test"
   },
   "keywords": [],
   "author": "",

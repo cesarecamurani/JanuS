@@ -22,11 +22,10 @@ git clone https://github.com/cesarecamurani/JanuS
 ```
 1. From the command line in the main folder:
 ```
-npm add colors
-```
-2. From the command line in the main folder:
-```
 npm install
+```
+```
+npm add colors
 ```
 3. From the command line in the proj folder:
 ```
@@ -35,11 +34,11 @@ npm add deep-equal
 ```
 npm link
 ```
-4. From the command line in the playground folder:
+3. From the command line in the playground folder:
 ```
 npm link janus
 ```
 
 Now you can go in <b>playground/src</b> and add the code to be tested and in <b>playground/tests</b> to write your tests.
 
-Please note that you may need to repeat steps <b>3</b> and <b>4</b> in case you install other dependencies after them.
+Please note that you may need to repeat steps <b>2</b> and <b>3</b> in case you install other dependencies after them.

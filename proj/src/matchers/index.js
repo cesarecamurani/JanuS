@@ -4,7 +4,7 @@ module.exports = {
   deeplyIdentical: require('./deeply-identical'),
   contains: require('./contains'),
   notContains: require('./notContains'),
-  truthy: require('./truthy'),
-  falsy: require('./falsy'),
+  isFalse: require('./isFalse'),
+  isTrue: require('./isTrue'),
   throws: require('./throws'),
 };

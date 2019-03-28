@@ -9,6 +9,13 @@ group('Airport', () => {
       verify.contains(airport.hangar, plane);
     });
   });
+  group('method: clearForLanding', () => {
+    check('adds a plane to the hangar', () => {
+      airport.clearForTakeOff(plane)
+      airport.clearForLanding(plane)
+      verify.isTrue(verify.contains(airport.hangar, plane));
+    });
+  });
   group('method: clearForTakeOff', () => {
     check('removes a plane from the hangar', () => {
       airport.clearForTakeOff(plane)

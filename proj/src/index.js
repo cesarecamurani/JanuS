@@ -57,7 +57,7 @@ const check = (title, cb) => {
 
 // Disables a test unit
 const xcheck = (title, cb) => {
-  log(`${indent(indentLevel + 1)}${' Not checkd '.bgWhite.black} ${title.gray}`);
+  log(`${indent(indentLevel + 1)}${' Not Checked '.bgWhite.black} ${title.gray}`);
   summary.disabled++;
 };
 

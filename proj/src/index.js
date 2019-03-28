@@ -41,7 +41,7 @@ const group = (title, cb) => {
 };
 
 // Declares a test unit
-const judge = (title, cb) => {
+const check = (title, cb) => {
   runEveryBeforeEach();
 
   try{
@@ -56,8 +56,8 @@ const judge = (title, cb) => {
 };
 
 // Disables a test unit
-const xjudge = (title, cb) => {
-  log(`${indent(indentLevel + 1)}${' Not Judged '.bgWhite.black} ${title.gray}`);
+const xcheck = (title, cb) => {
+  log(`${indent(indentLevel + 1)}${' Not checkd '.bgWhite.black} ${title.gray}`);
   summary.disabled++;
 };
 
@@ -72,12 +72,12 @@ const verify = (val) => {
 Object.assign(verify, matchers);
 
 // Prints the test summary and finishes the process with the appropriate exit code
-const judgement = () => {
+const report = () => {
   log(`\n${repeat('.', 60)}\n`);
-  log('Final Judgement:\n');
+  log('Report:\n');
   log(`  Success: ${summary.success}`.green);
   log(`  Fail: ${summary.fail}`.red);
-  log(`  Not Judged: ${summary.disabled}\n\n`.gray);
+  log(`  Not checkd: ${summary.disabled}\n\n`.gray);
 
   if (summary.fail > 0) process.exit(1);
   process.exit(0);
@@ -92,5 +92,5 @@ const beforeEach = (cb) => {
 };
 
 // Exports janus's DSL
-const dsl = { verify, judge, xjudge, judgement, group, beforeEach, beforeAll };
+const dsl = { verify, check, xcheck, report, group, beforeEach, beforeAll };
 module.exports = Object.assign(janus, dsl);

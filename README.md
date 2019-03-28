@@ -2,7 +2,7 @@
 
 Testing framework made in <b>JavaScript</b>
 
-![Alt text](/janusTest.png?raw=true "janusTest")
+![Alt text](/screenshot.png?raw=true "Janus Testing Framework")
 
 ### How to use it:
 
@@ -27,5 +27,5 @@ npm link
 ```
 
 Now you can go in <b>playground/src</b> and add the code to be tested and in <b>playground/tests</b> to write your tests.
- 
+
 Please note that you may need to repeat steps <b>3</b> and <b>4</b> in case you install other dependencies after them.

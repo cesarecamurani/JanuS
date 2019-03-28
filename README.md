@@ -9,22 +9,23 @@ Testing framework made in <b>Javascript</b>
 ```
 git clone https://github.com/cesarecamurani/JanuS
 ```
-From the command line in the main folder:
+1. From the command line in the main folder:
 ```
 npm add colors
 ```
-From the command line in the main folder:
+2. From the command line in the main folder:
 ```
 npm install
 ```
-From the command line in the playground folder:
+3. From the command line in the playground folder:
 ```
 npm link janus
 ```
-From the command line in the proj folder:
+4. From the command line in the proj folder:
 ```
 npm link
 ```
 
 Now you can go in <b>playground/src</b> and add the code to be tested and in <b>playground/tests</b> to write your tests.
  
+Please note that you may need to repeat steps <b>3</b> and <b>4</b> in case you install other dependencies.

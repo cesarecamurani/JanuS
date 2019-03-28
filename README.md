@@ -17,13 +17,16 @@ npm add colors
 ```
 npm install
 ```
-3. From the command line in the playground folder:
+3. From the command line in the proj folder:
 ```
-npm link janus
+npm add deep-equal
 ```
-4. From the command line in the proj folder:
 ```
 npm link
+```
+4. From the command line in the playground folder:
+```
+npm link janus
 ```
 
 Now you can go in <b>playground/src</b> and add the code to be tested and in <b>playground/tests</b> to write your tests.

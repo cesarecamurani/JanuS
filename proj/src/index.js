@@ -77,7 +77,7 @@ const report = () => {
   log('Report:\n');
   log(`  Success: ${summary.success}`.green);
   log(`  Fail: ${summary.fail}`.red);
-  log(`  Not checkd: ${summary.disabled}\n\n`.gray);
+  log(`  Not Checked: ${summary.disabled}\n\n`.gray);
 
   if (summary.fail > 0) process.exit(1);
   process.exit(0);

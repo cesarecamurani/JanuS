@@ -1,6 +1,6 @@
 # 🌜 JanuS  🌛
 
-Testing framework made in <b>Javascript</b>
+Testing framework made in <b>JavaScript</b>
 
 ![Alt text](/janusTest.png?raw=true "janusTest")
 

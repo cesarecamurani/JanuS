@@ -1,6 +1,6 @@
-const { verify, judge } = require('janus');
+const { verify, check } = require('janus');
 
-judge('playing with our new matchers', () => {
+check('playing with our new matchers', () => {
   // The original verify function still works
   verify(123 === 123);
 

@@ -1,4 +1,4 @@
-# 🌜 JanuS  🌛
+# 🌜 JanuS6  🌛
 
 Testing framework made in <b>JavaScript</b>
 
@@ -27,7 +27,7 @@ npm install
 ```
 npm add colors
 ```
-3. From the command line in the proj folder:
+2. From the command line in the proj folder:
 ```
 npm add deep-equal
 ```

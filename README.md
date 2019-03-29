@@ -32,19 +32,19 @@ let something = new YourClass()
 let somethingElse = new YourClass()
 
 janus6.group('YourClass', () => {
-  janus6.group('method: yourMethod', () => {
+  janus6.group('method: doesSomething', () => {
     janus6.check('whatever you want to test', () => {
       something.doesSomething()
-      verify.contains(container, contained);
+      verify.contains(container, content);
     });
   });
-  janus6.group('method: yourMethod', () => {
+  janus6.group('method: doesSomethingElse', () => {
     janus6.check('whatever you want to test', () => {
       something.doesSomethingElse()
       verify.isTrue("JavaScript is amazing!"); // evaluates to true by the way! 😉    
     });
   });
-  janus6.group('method: yourMethod', () => {
+  janus6.group('method: doesAnotherThing', () => {
     janus6.check('whatever you want to test', () => {
       something.doesAnotherThing()
       verify.same(something, somethingElse);

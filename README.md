@@ -24,7 +24,7 @@ npm install janus6
 
 Now you can use it in your tests (example made assuming you're using ES6 syntax):
 
-Create test/index.js and require tour tests:
+Create test/index.js and require your tests:
 ```
 // test/index.js
 
@@ -34,6 +34,7 @@ require('./YourClass.test');
 
 janus6.report();
 ```
+In YourClass.test.js:
 ```
 import janus6 from 'janus6'
 import { verify } from 'janus6'

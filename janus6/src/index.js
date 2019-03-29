@@ -1,10 +1,8 @@
 'use strict';
-exports.printMsg = function() {
-  console.log("This is a message from the demo package");
-}
+
 const colors = require('colors');
 const matchers = require('./matchers');
-const janus = {
+const janus6 = {
   SILENT: false
 };
 
@@ -23,7 +21,7 @@ const runEveryBeforeEach = () => {
 };
 
 // Logs a string to the console
-const log = str => !janus.SILENT && console.log(str);
+const log = str => !janus6.SILENT && console.log(str);
 
 // Keeps some counters used to print the summary after the execution of a test suite is completed
 const summary = { success: 0, fail: 0, disabled: 0 };
@@ -93,6 +91,6 @@ const beforeEach = (cb) => {
   beforeEachStack[beforeEachStack.length - 1].push(cb);
 };
 
-// Exports janus's DSL
+// Exports janus6's DSL
 const dsl = { verify, check, xcheck, report, group, beforeEach, beforeAll };
-module.exports = Object.assign(janus, dsl);
+module.exports = Object.assign(janus6, dsl);

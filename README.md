@@ -24,8 +24,33 @@ npm install janus6
 
 Now you can use it in your tests (remember to name them as MyClass.test.js):
 ```
-import janus6 from 'janus6';
-import { verify } from 'janus6';
-```
+import janus6 from 'janus6'
+import { verify } from 'janus6'
+import YourClass from '../src/YourClass'
 
+let something = new YourClass()
+let somethingElse = new YourClass()
+
+janus6.group('YourClass', () => {
+  janus6.group('method: yourMethod', () => {
+    janus6.check('whatever you want to test', () => {
+      something.doesSomething()
+      verify.contains(container, contained);
+    });
+  });
+  janus6.group('method: yourMethod', () => {
+    janus6.check('whatever you want to test', () => {
+      something.doesSomethingElse()
+      verify.isTrue("JavaScript is amazing!"); // evaluates to true by the way! 😉    
+    });
+  });
+  janus6.group('method: yourMethod', () => {
+    janus6.check('whatever you want to test', () => {
+      something.doesAnotherThing()
+      verify.same(something, somethingElse);
+    });
+  });
+});
+
+```
 

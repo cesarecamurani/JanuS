@@ -17,9 +17,6 @@ Testing framework made in <b>JavaScript</b>
 
 ### How to use it:
 
-```
-git clone https://github.com/cesarecamurani/JanuS6
-```
 From the command line in the main folder:
 ```
 npm install janus6

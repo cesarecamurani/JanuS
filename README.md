@@ -18,27 +18,17 @@ Testing framework made in <b>JavaScript</b>
 ### How to use it:
 
 ```
-git clone https://github.com/cesarecamurani/JanuS
+git clone https://github.com/cesarecamurani/JanuS6
 ```
-1. From the command line in the main folder:
+From the command line in the main folder:
 ```
-npm install
-```
-```
-npm add colors
-```
-2. From the command line in the proj folder:
-```
-npm add deep-equal
-```
-```
-npm link
-```
-3. From the command line in the playground folder:
-```
-npm link janus
+npm install janus6
 ```
 
-Now you can go in <b>playground/src</b> and add the code to be tested and in <b>playground/tests</b> to write your tests.
+Now you can use it in your tests (remember to name them as MyClass.test.js):
+```
+import janus6 from 'janus6';
+import { verify } from 'janus6';
+```
 
-Please note that you may need to repeat steps <b>2</b> and <b>3</b> in case you install other dependencies after them.
+

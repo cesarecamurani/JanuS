@@ -22,7 +22,7 @@ From the command line in the main folder:
 npm install janus6
 ```
 
-Now you can use it in your tests (remember to name them as MyClass.test.js):
+Now you can use it in your tests (example made assuming you're using ES6 syntax):
 ```
 import janus6 from 'janus6'
 import { verify } from 'janus6'
